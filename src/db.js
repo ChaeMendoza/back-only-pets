@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 const makeAssociations = require("./associations/associations");
 const models = require("./fsModels/fsModels"); 
 const {
-    DB_USER, DB_PASSWORD, DB_HOST, MODEL_NAME, DB_DEPLOY
+    DB_USER, DB_PASSWORD, DB_HOST, MODEL_NAME, DATABASE_URL
 } = process.env;
 const sequelizePath = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${MODEL_NAME}`;
 
