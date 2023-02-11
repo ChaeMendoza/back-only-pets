@@ -8,7 +8,7 @@ const models = [];
 //le doy la direccion de src porque de otra forma entra a esta carpeta fsModels cuando necesito que se quede en src/models
 
 const direction = __dirname.split(/\\/g)
-const srcDirection = "../../models";
+const srcDirection = "../models";
 console.log(
         srcDirection
 )
