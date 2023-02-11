@@ -10,7 +10,7 @@ const models = [];
 const direction = __dirname.split(/\\/g)
 const srcDirection = "./back-only-pets/src/models";
 console.log(
-        srcDirection
+        srcDirection, __dirname
 )
 // Leemos todos los archivos de la carpeta Models, los requerimos y agregamos al arreglo models
 fs.readdirSync(path.join(srcDirection))
