@@ -11,8 +11,8 @@ require("dotenv").config()
 const server = express();
 
 let corsOptions = {
-  origin: '*',
-  optionsSuccessStatus: 200 // For legacy browser support
+    origin: 'https://only-pets-pf.web.app/',
+    optionsSuccessStatus: 200 // For legacy browser support
 }
 
 server.use(cors());
