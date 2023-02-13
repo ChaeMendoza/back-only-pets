@@ -5,10 +5,10 @@ const {
 } = require("../../controllers/controllerProducts/controllerGet_P");
 const router = Router();
 
-router.get("/getp/:name", async (req, res) => {
+router.get("/getp/:id", async (req, res) => {
   try {
-    const { name } = req.params;
-    const get_P = await findProduct(name);
+    const { id } = req.params;
+    const get_P = await findProduct(id);
      
 
     if (!get_P)
@@ -18,12 +18,13 @@ router.get("/getp/:name", async (req, res) => {
         detail: "No Existe el producto en la BD.",
       });
     else {
-      get_P.url = cloudinary.url(get_P.image_U, {
+      const obj = {...get_P.dataValues}
+      obj.url = cloudinary.url(obj.image_url, {
           width: 100,
           height: 150,
           Crop: 'fill'
         });
-      res.send(get_P);
+      res.send(obj);
     }
   } catch (err) {
     res.status(404).send({
