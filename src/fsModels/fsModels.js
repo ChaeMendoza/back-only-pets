@@ -11,9 +11,9 @@ const direction = __dirname.split(/\\/g)
 const srcDirection = "/app/src/models";
 // Leemos todos los archivos de la carpeta Models, los requerimos y agregamos al arreglo models
 fs.readdirSync(path.join(srcDirection))
-  .filter((file) => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
-  .forEach((file) => {
-      models.push(require(path.join(srcDirection, file)));
-  });
+    .filter((file) => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
+    .forEach((file) => {
+        models.push(require(path.join(srcDirection, file)));
+    });
 
 module.exports = models;

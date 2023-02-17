@@ -8,6 +8,10 @@ module.exports = (sequelize) => {
       allowNull: false,
       defaultValue: DataTypes.UUIDV4,
     }, 
+    num:{
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -40,10 +44,17 @@ module.exports = (sequelize) => {
       allowNull: false,
       defaultValue: DataTypes.UUIDV4
     },
+    url: {
+        type: DataTypes.STRING,
+        allowFalse: false
+    },
     unsubscribe: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,
-    },
+    }  
+  },{
+    // Opciones de tu modelo
+    paranoid: true // Habilita eliminación suave eliminacion logica
   });
 };
