@@ -5,8 +5,8 @@ const models = require("./fsModels/fsModels");
 const { DATABASE_URL } = process.env;
 
 const sequelize = new Sequelize(DATABASE_URL, {
-  logging: false, // set to console.log to see the raw SQL queries
-  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+    logging: false, // set to console.log to see the raw SQL queries
+    native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 });
 
 
@@ -20,6 +20,6 @@ sequelize.models = Object.fromEntries(capsEntries);
 makeAssociations(sequelize);
 
 module.exports = {
-  ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
-  conn: sequelize,     // para importart la conexión { conn } = require('./db.js');
+    ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
+    conn: sequelize,     // para importart la conexión { conn } = require('./db.js');
 };
