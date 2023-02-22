@@ -16,19 +16,6 @@ router.put("/update/:idUser", async (req, res) => {
             detail: "No Se Encuentra El Usuario" 
         }) 
         else{
-            //NECESITO QUE SE ME ENVIE LA DATA CON EL _U. EJ: name_U
-            /*
-            let url, newData;
-            if(req.body.data.img){
-                url = await cloudinary.uploader.upload(req.body.data.img, {
-                    invalidate: true,
-                    public_id: req.body.data.codImg
-                })    
-            }
-            else {
-                newData = addNewValuesToAnObj(req.body);
-            } 
-            */
             const newData = addNewValuesToAnObj(req.body);
 
             await User.update(newData,{

@@ -45,10 +45,3 @@ router.put("/unsubscribe/:idUser", async (req, res) => {
 });
 
 module.exports = router;
-
-
-
-/* 
-await Product.destroy({
-    where: { codProduct },
-  }); */

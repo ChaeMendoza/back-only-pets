@@ -6,7 +6,6 @@ const {
   API_SECRET
 } = process.env;
 // Configuration 
-console.log(process.env.API_KEY, ">")
 //-----------------------------------------
 cloudinary.config({
     cloud_name: CLOUD_NAME,
