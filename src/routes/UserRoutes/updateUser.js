@@ -67,7 +67,7 @@ router.put("/update/:idUser", async (req, res) => {
                     cod_User: idUser
                 }
             })      
-            const {data} = await axios.get(`http://localhost:3001/users/get?email=${req.body.email_U}&password=${req.body.password_U}`)
+            const {data} = await axios.get(`https://back-only-pets-production.up.railway.app/users/get?email=${req.body.email_U}&password=${req.body.password_U}`)
             const obj = {...data.value};
 
             res.status(200).json({
