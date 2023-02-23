@@ -30,10 +30,7 @@ module.exports = (sequelize) => {
     },
     stock: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        min: 1
-      }
+      allowNull: true,
     },
     breedType: {
       type: DataTypes.ARRAY(DataTypes.STRING),
