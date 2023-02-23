@@ -20,7 +20,7 @@ async function addNewValuesToAnObj(newValues){
     })
     
     for(let prop in newValues){
-        if(prop === "url" && url) newObj.url = url;
+        if(prop === "url" && url) newObj.url = url.url;
         else if(prop !== "email_U" && prop !== "idUser" && prop !== "image_U" && newValues[prop]) newObj[prop] = newValues[prop];
     }
     return newObj;
