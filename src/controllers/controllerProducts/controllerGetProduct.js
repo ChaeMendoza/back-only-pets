@@ -51,7 +51,7 @@ const getProducts = async (nameP) => {
             ],            
           }
         })
-          const {data} = await axios.get("http://localhost:3001/products/restore/getban")  
+             const {data} = await axios.get("https://back-only-pets-production.up.railway.app/products/restore/getban")  
       } 
        /*  if(nameP){ 
         allProducts = await Product.findAll({
